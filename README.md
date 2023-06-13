@@ -3,7 +3,7 @@
 A weather app created using Flutter that can give the weather data of the current location as well as any city in the world.
 
 <!-- Demo GIF: -->
-<img src="https://github.com/londonappbrewery/Images/blob/master/clima-demo.gif" width="300">
+<img src="https://raw.githubusercontent.com/SakshamKarnawat/SakshamKarnawat/main/clima_demo.gif" width="300">
 
 
 ## Learning Objectives
