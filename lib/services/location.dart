@@ -1,4 +1,5 @@
 import 'package:geolocator/geolocator.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class Location {
   double? latitude;
@@ -6,10 +7,20 @@ class Location {
 
   Future<void> getCurrentLocation() async {
     try {
-      LocationPermission perm = await Geolocator.requestPermission();
-      if (perm != LocationPermission.whileInUse &&
-          perm != LocationPermission.always) {
-        throw Exception("Location permission not granted");
+      if (await Permission.location.request().isGranted) {
+        // Either the permission was already granted before or the user just granted it.
+      } else {
+        // Permission has not been granted.
+      }
+
+      var status = await Permission.location.status;
+      if (status.isGranted) {
+        // Location permission granted
+      } else if (status.isDenied) {
+        // Location permission not granted so ask again:
+        await Permission.location.request();
+      } else if (status.isPermanentlyDenied) {
+        openAppSettings();
       }
 
       Position position = await Geolocator.getCurrentPosition(
