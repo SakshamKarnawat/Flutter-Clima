@@ -1,17 +1,12 @@
-![App Brewery Banner](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
-
-
 # Clima ☁
 
-## Our Goal
+A weather app created using Flutter that can give the weather data of the current location as well as any city in the world.
 
-The objective of this tutorial is to learn about asynchronous programming in Dart. We'll look at how to carry out time consuming tasks such as getting device location and networking to get data from the internet. 
+<!-- Demo GIF: -->
+<img src="https://github.com/londonappbrewery/Images/blob/master/clima-demo.gif" width="300">
 
 
-
-(https://github.com/londonappbrewery/Images/blob/master/clima-demo.gif)
-
-## What I have learned
+## Learning Objectives
 
 - How to use Dart to perform asynchronous tasks.
 - Understand async and await.
